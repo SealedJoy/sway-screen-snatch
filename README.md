@@ -9,11 +9,11 @@ slurp
 grim
 
 # Install:
-git clone https://github.com/SealedJoy/sway-screen-snatch
+`git clone --depth=1 https://github.com/SealedJoy/sway-screen-snatch`
 
-cd sway-screen-snatch && cp sssnatch ~/.local/bin
+`cd sway-screen-snatch && cp sssnatch ~/.local/bin`
 
 (or another location in your $PATH)
 
 # Usage:
-$> sssnatch
+`$> sssnatch`
