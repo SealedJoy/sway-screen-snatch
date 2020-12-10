@@ -6,3 +6,10 @@ sway
 slurp
 grim
 
+Install:
+clone repo
+cd repodir
+cp sssnatch ~/.local/bin (or another location in your $PATH)
+
+Usage:
+$> sssnatch
