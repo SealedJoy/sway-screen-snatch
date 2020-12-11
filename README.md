@@ -1,15 +1,19 @@
-# sway-screen-snatch
+# sway-screen-snatch (sssnatch)
 Simple script to mouse a portion of screen and save as timestamped png, for users of wayland / sway.
 
-Required packages:
+# Required packages:
 sway
+
 slurp
+
 grim
 
-Install:
-clone repo
-cd repodir
-cp sssnatch ~/.local/bin (or another location in your $PATH)
+# Install:
+`git clone --depth=1 https://github.com/SealedJoy/sway-screen-snatch`
 
-Usage:
-$> sssnatch
+`cd sway-screen-snatch && cp sssnatch ~/.local/bin`
+
+(or another location in your $PATH)
+
+# Usage:
+`$> sssnatch`
