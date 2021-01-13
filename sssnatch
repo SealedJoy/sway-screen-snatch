@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
-# SealyJ 2020
+# SealyJ 2021
 # requires: grim and slurp for wayland
+default_save_dir=~/images/screenshots/
+
+echo '[sssnatch] : Name this screenshot? (Enter to skip / use datetime)'
+read user_named
+if [ ! -z "$user_named" ] ; then
+	filename="$user_named.png"
+	outputdir="" #current . folder if skipped
+else
+	[[ -d "$default_save_dir" ]] || mkdir -p "$default_save_dir"
+	outputdir="$default_save_dir"
+	datetimeformatted="$(date +%F_%H-%M-%S)"
+	filename="screengrab_$datetimeformatted.png"
+fi
 
 cwd=$(pwd)
-datetimeformatted="$(date +%F_%H-%M-%S)"
-filename="screengrab_$datetimeformatted.png"
-echo -n '[sssnatch] : 麗Select a region of the screen to grab...'
+echo -ne "\r[sssnatch] : 麗Drag a box over the region of the screen to capture..."
 dimensions="$(slurp)"
+
 if [ $? -ne 0 ] ; then
   exit 1
 fi
-grim -g "$dimensions" "$filename" && echo -ne "\r[sssnatch] :  written to $cwd/$filename\n" 
-
+echo -ne "\r[sssnatch] :  writing to $outputdir$filename \n" 
+grim -g "$dimensions" "$filename" 
