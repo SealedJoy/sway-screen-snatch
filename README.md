@@ -15,3 +15,8 @@ grim
 
 # Usage:
 `$> sssnatch`
+
+# Note:
+if you skip inputting a name for the screenshot, it will be saved to ~/images/screenshots with the datetime as filename.
+
+if you name your screenshot, it will be saved inside of your current working directory.
