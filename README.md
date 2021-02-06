@@ -1,5 +1,5 @@
 # sway-screen-snatch (sssnatch)
-mouse a portion of screen and save as named / timestamped png, for users of wayland / sway.
+mouse a portion of screen and save as a named / timestamped png. - For users of wayland / sway.
 
 ## Required packages:
 sway
