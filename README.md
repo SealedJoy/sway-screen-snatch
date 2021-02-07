@@ -1,5 +1,5 @@
 # sway-screen-snatch (sssnatch)
-mouse a portion of screen and save as a named / timestamped png. For users of Wayland.
+Simple script to mouse a portion of screen and save as timestamped png, for users of wayland / sway.
 
 ## Required packages:
 sway
@@ -20,3 +20,5 @@ grim
 if you skip inputting a name for the screenshot, it will be saved to ~/images/screenshots with the datetime as filename.
 
 if you name your screenshot, it will be saved inside of your current working directory.
+
+This behavior is intended to speed up creating screenshots for your projects as you can name, crop and save by simply run sssnatch directly from your project folder.
